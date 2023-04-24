@@ -193,3 +193,42 @@ function nonrepeate() {
 nonrepeate();
 
 // -----------------------------------------------------------------------------------------------
+
+// program to generate fibonacci series up to n terms
+
+// take input from the user
+function fibo(number) {
+  let n1 = 0,
+    n2 = 1;
+
+  // console.log(n1);
+  // console.log(n2);
+  let nextTerm;
+
+  let arr = [n1, n2];
+
+  // console.log("Fibonacci Series:");
+
+  for (let i = 1; i <= number; i++) {
+    nextTerm = n1 + n2;
+
+    n1 = n2;
+    n2 = nextTerm;
+
+    arr.push(nextTerm);
+
+    // console.log(nextTerm);
+
+    // console.log("nextterm =", nextTerm);
+  }
+
+  let total = arr.reduce((a, b) => a + b);
+
+  console.log(arr[number - 1]);
+
+  console.log(total);
+}
+
+fibo(1);
+
+// -----------------------------------------------------------------------------------------------
