@@ -59,7 +59,7 @@ countString("good morning", "n");
 
 // program to count the number of vowels in a string
 
-defining vowels
+// defining vowels
 
 function countVowel(str) {
   const vowels = ["a", "e", "i", "o", "u"];
@@ -77,7 +77,7 @@ function countVowel(str) {
   //   }
 
   for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str.charAt(i))) {
+    if (vowels.includes(strtwo.charAt(i))) {
       count++;
     }
   }
@@ -119,7 +119,7 @@ function findsum() {
 
 findsum();
 
------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------
 
 function removechar(str) {
   strtwo = str.replace("n", "");
@@ -133,6 +133,10 @@ removechar("morning");
 function checkprime(num) {
   let isPrime = true;
   let number = num;
+
+  if (number < 1) {
+    console.log(`${number} is a not prime number`);
+  }
   if (number > 1) {
     // looping through 2 to number-1
     for (let i = 2; i < number; i++) {
@@ -141,7 +145,6 @@ function checkprime(num) {
         break;
       }
     }
-
     if (isPrime) {
       console.log(`${number} is a prime number`);
     } else {
@@ -184,9 +187,11 @@ reversenum("58");
 
 function nonrepeate() {
   arr = [10, 10, 20, 30, 30, 40, 50, 60, 60, 80, 80, 80];
-  list = arr.filter((x, i, a) => a.indexOf(x) == i);
-  //   20,40,50
-
+  list = arr.filter((x, i, a) => {
+    a.indexOf(x) == i;
+    console.log(x, i, a);
+    //   20,40,50
+  });
   console.log(list);
 }
 
@@ -224,7 +229,11 @@ function fibo(number) {
 
   let total = arr.reduce((a, b) => a + b);
 
-  console.log(arr[number - 1]);
+  // arr.pop();
+  // arr.pop();
+  // console.log(arr);
+
+  // console.log(arr[number - 1]);
 
   console.log(total);
 }
