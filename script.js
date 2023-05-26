@@ -241,3 +241,73 @@ function fibo(number) {
 fibo(1);
 
 // -----------------------------------------------------------------------------------------------
+
+function star(n) {
+  let string = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = 0; j < i; j++) {
+      string = string + "*";
+    }
+    string += "\n";
+  }
+  console.log(string);
+}
+
+star(5);
+
+// output
+
+// *
+// **
+// ***
+// ****
+// *****
+
+// -------------------------------------------------
+
+function printnumbers(n) {
+  let string = "";
+  for (let i = 1; i <= n; i++) {
+    for (let j = 0; j < i; j++) {
+      string = string + i;
+    }
+    string += "\n";
+  }
+  console.log(string);
+}
+
+printnumbers(5);
+
+// output
+
+// 1
+// 22
+// 333
+// 4444
+// 55555
+
+// ----------------------------------------------------------------
+
+function printnumbersunique(n) {
+  let string = "";
+  for (let i = 1; i <= n; i++) {
+    string = string + 1;
+    for (let j = 2; j <= i; j++) {
+      string = string + j;
+    }
+    string += "\n";
+  }
+  console.log(string);
+}
+
+printnumbersunique(5);
+
+// output
+
+// 1
+// 12
+// 123
+// 1234
+// 12345
+
+// ---------------------------------------------------------
